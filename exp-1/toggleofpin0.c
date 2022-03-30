@@ -9,7 +9,7 @@ for(j=0;j<120;j++);
 void main(){
 	  led=0x00;
     while(1){
-		led=0xff;
+		led=0x55;
 		delay(1);//1ms delay
 		led=0x00;
 		delay(1);//1ms delay
