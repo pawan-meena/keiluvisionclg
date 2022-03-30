@@ -1,0 +1,151 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/29/2022  13:14:58  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\embeddedlab1.obj TO .\Objects\embeddedlab1 PRINT (.\Listings\embeddedlab1.m51) RAM
+>> SIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\embeddedlab1.obj (EMBEDDEDLAB1)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\embeddedlab1 (EMBEDDEDLAB1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0081H     UNIT         ?PR?MAIN?EMBEDDEDLAB1
+            CODE    0881H     001DH     UNIT         ?PR?WAIT1?EMBEDDEDLAB1
+            CODE    089EH     001DH     UNIT         ?PR?WAIT2?EMBEDDEDLAB1
+            CODE    08BBH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\embeddedlab1 (EMBEDDEDLAB1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?EMBEDDEDLAB1
+
+?PR?MAIN?EMBEDDEDLAB1
+  +--> ?PR?WAIT1?EMBEDDEDLAB1
+  +--> ?PR?WAIT2?EMBEDDEDLAB1
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\embeddedlab1 (EMBEDDEDLAB1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        EMBEDDEDLAB1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/29/2022  13:14:58  PAGE 2
+
+
+  D:00B0H         PUBLIC        P3
+  C:0800H         PUBLIC        main
+  C:0881H         PUBLIC        wait1
+  C:089EH         PUBLIC        wait2
+  -------         PROC          WAIT1
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0881H         LINE#         2
+  C:0881H         LINE#         3
+  C:0881H         LINE#         5
+  C:0884H         LINE#         6
+  C:089DH         LINE#         7
+  -------         ENDPROC       WAIT1
+  -------         PROC          WAIT2
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:089EH         LINE#         8
+  C:089EH         LINE#         9
+  C:089EH         LINE#         11
+  C:08A1H         LINE#         12
+  C:08BAH         LINE#         13
+  -------         ENDPROC       WAIT2
+  -------         PROC          MAIN
+  C:0800H         LINE#         14
+  C:0800H         LINE#         15
+  C:0800H         LINE#         16
+  C:0803H         LINE#         17
+  C:0805H         LINE#         18
+  C:0807H         LINE#         19
+  C:0807H         LINE#         20
+  C:0807H         LINE#         21
+  C:080AH         LINE#         22
+  C:080DH         LINE#         23
+  C:0810H         LINE#         24
+  C:0813H         LINE#         25
+  C:0816H         LINE#         26
+  C:0819H         LINE#         27
+  C:081CH         LINE#         28
+  C:081FH         LINE#         29
+  C:0822H         LINE#         30
+  C:0825H         LINE#         31
+  C:0828H         LINE#         32
+  C:082BH         LINE#         33
+  C:082EH         LINE#         34
+  C:0831H         LINE#         35
+  C:0834H         LINE#         36
+  C:0837H         LINE#         37
+  C:083AH         LINE#         38
+  C:083DH         LINE#         39
+  C:0840H         LINE#         40
+  C:0843H         LINE#         41
+  C:0846H         LINE#         42
+  C:0849H         LINE#         43
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/29/2022  13:14:58  PAGE 3
+
+
+  C:084CH         LINE#         44
+  C:084FH         LINE#         45
+  C:0852H         LINE#         46
+  C:0855H         LINE#         47
+  C:0858H         LINE#         48
+  C:085BH         LINE#         49
+  C:085EH         LINE#         50
+  C:0861H         LINE#         51
+  C:0864H         LINE#         52
+  C:0867H         LINE#         53
+  C:086AH         LINE#         54
+  C:086DH         LINE#         55
+  C:0870H         LINE#         56
+  C:0873H         LINE#         57
+  C:0876H         LINE#         58
+  C:0879H         LINE#         59
+  C:087CH         LINE#         60
+  C:087FH         LINE#         61
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        EMBEDDEDLAB1
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00BBH BYTE ( 9%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=202
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,41 @@
+C51 COMPILER V9.60.0.0   TOGGLEOFPIN0                                                      03/29/2022 15:09:36 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE TOGGLEOFPIN0
+OBJECT MODULE PLACED IN .\Objects\toggleofpin0.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.exe toggleofpin0.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listi
+                    -ngs\toggleofpin0.lst) TABS(2) OBJECT(.\Objects\toggleofpin0.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit led = P0^0;
+   3          void delay ( unsigned int a )
+   4          {
+   5   1      unsigned int I,j;
+   6   1      for(I=0;I<a;I++)
+   7   1      for(j=0;j<120;j++);
+   8   1      }
+   9          void main(){
+  10   1          led=0x00;
+  11   1          while(1){
+  12   2          led=0xff;
+  13   2          delay(1);//1ms delay
+  14   2          led=0x00;
+  15   2          delay(1);//1ms delay
+  16   2        }
+  17   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     50    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

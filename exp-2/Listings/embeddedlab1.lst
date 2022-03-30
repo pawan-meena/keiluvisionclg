@@ -1,0 +1,88 @@
+C51 COMPILER V9.60.0.0   EMBEDDEDLAB1                                                      03/29/2022 13:14:58 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE EMBEDDEDLAB1
+OBJECT MODULE PLACED IN .\Objects\embeddedlab1.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.exe embeddedlab1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listi
+                    -ngs\embeddedlab1.lst) TABS(2) OBJECT(.\Objects\embeddedlab1.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void wait1()
+   3          {
+   4   1      unsigned int i,j;
+   5   1      for(i=0;i<1000;i++)
+   6   1      for(j=0;j<319;j++);
+   7   1      }
+   8          void wait2()
+   9          {
+  10   1      unsigned int i,j;
+  11   1      for (i=0;i<500;i++)
+  12   1      for(j=0;j<319;j++);
+  13   1      }
+  14          void main()
+  15          {
+  16   1      P1=0x00;
+  17   1      P2=0x00;
+  18   1      P3=0x00;
+  19   1      while(1)
+  20   1      {
+  21   2      P0=0xDB;
+  22   2      P1=0xCD;
+  23   2      P2=0xB6;
+  24   2      wait1();
+  25   2      P0=0xDB;
+  26   2      P1=0xB5;
+  27   2      P2=0xB6;
+  28   2      wait2();
+  29   2      P0=0xDB;
+  30   2      P1=0x79;
+  31   2      P2=0xB6;
+  32   2      wait1();
+  33   2      P0=0xDB;
+  34   2      P1=0x76;
+  35   2      P2=0xB6;
+  36   2      wait2();
+  37   2      P0=0xDB;
+  38   2      P1=0x6F;
+  39   2      P2=0x36;
+  40   2      wait1();
+  41   2      P0=0xDB;
+  42   2      P1=0x6F;
+  43   2      P2=0x16;
+  44   2      wait2();
+  45   2      P0=0xDB;
+  46   2      P1=0x6D;
+  47   2      P2=0xE6;
+  48   2      wait1();
+  49   2      P0=0x49;
+  50   2      P1=0x6D;
+  51   2      P2=0xC2;
+  52   2      wait2();
+  53   2      P0=0xB6;
+  54   2      P1=0x6D;
+C51 COMPILER V9.60.0.0   EMBEDDEDLAB1                                                      03/29/2022 13:14:58 PAGE 2   
+
+  55   2      P2=0xBD;
+  56   2      wait1();
+  57   2      P0=0x24;
+  58   2      P1=0x2D;
+  59   2      P2=0xB9;
+  60   2      wait2();
+  61   2      }
+  62   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    187    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
