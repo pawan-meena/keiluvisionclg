@@ -1,0 +1,59 @@
+C51 COMPILER V9.60.0.0   EXP_4                                                             04/19/2022 13:51:12 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE EXP_4
+OBJECT MODULE PLACED IN .\Objects\exp-4.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.exe exp-4.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\exp
+                    --4.lst) TABS(2) OBJECT(.\Objects\exp-4.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit c0=P1^4;
+   3          sbit c1=P1^5;
+   4          sbit c2=P1^6;
+   5          sbit c3=P1^7;
+   6          void msdelay(unsigned int time){
+   7   1        unsigned int i,j;
+   8   1        for(i=0;i<time;i++)
+   9   1        for(j=0;j<319;j++);
+  10   1      }
+  11          void main(){
+  12   1        unsigned int i,DD0,DD1,DD2,count;
+  13   1        while(1)
+  14   1        {
+  15   2          count=count+1;
+  16   2          if(count>100)
+  17   2            count=0;
+  18   2          DD0=count%10;
+  19   2          DD1=(count/10)%10;
+  20   2          DD2=(count/100)%10;
+  21   2          for(i=0;i<=100;i++){
+  22   3            P1=DD0;
+  23   3            c0=1;
+  24   3            msdelay(100);
+  25   3            P1=DD1;
+  26   3            c1=1;
+  27   3            msdelay(100);
+  28   3            P1=DD2;
+  29   3            c2=1;
+  30   3            msdelay(100);
+  31   3          }
+  32   2        }
+  33   1      }
+  34                
+  35                
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    160    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       8
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
