@@ -1,0 +1,77 @@
+A51 MACRO ASSEMBLER  EXP_8_1                                                              04/26/2022 15:38:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp-8-1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE exp-8-1.asm SET(SMALL) DEBUG PRINT(.\Listings\exp-8-1.lst) OBJECT(.\Obj
+                      ects\exp-8-1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+                       2     
+0000 C3                3     CLR C
+                       4     
+0001 7405              5     MOV A,#05H
+                       6     
+0003 2403              7     ADD A,#03H
+                       8     
+0005 F8                9     MOV R0,A
+                      10     
+0006 7465             11     MOV A,#65H
+                      12     
+0008 34AB             13     ADDC A,#0ABH
+                      14     
+000A F9               15     MOV R1,A
+                      16     
+000B 7465             17     MOV A,#65H
+                      18     
+000D 34AB             19     ADDC A,#0ABH
+                      20     
+000F FA               21     MOV R2,A
+                      22     
+0010 7465             23     MOV A,#65H
+                      24     
+0012 34AB             25     ADDC A,#0ABH
+                      26     
+0014 FB               27     MOV R3,A
+                      28     
+0015 7465             29     MOV A,#65H
+                      30     
+0017 34AB             31     ADDC A,#0ABH
+                      32     
+0019 FC               33     MOV R4,A
+                      34     
+001A 7465             35     MOV A,#65H
+                      36     
+001C 34AB             37     ADDC A,#0ABH
+                      38     
+001E FD               39     MOV R5,A
+                      40     
+001F 7465             41     MOV A,#65H
+                      42     
+0021 34AB             43     ADDC A,#0ABH
+                      44     
+0023 FE               45     MOV R6,A
+                      46     
+0024 7465             47     MOV A,#65H
+                      48     
+0026 34AB             49     ADDC A,#0ABH
+                      50     
+0028 FF               51     MOV R7,A
+                      52     
+                      53     END     
+A51 MACRO ASSEMBLER  EXP_8_1                                                              04/26/2022 15:38:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

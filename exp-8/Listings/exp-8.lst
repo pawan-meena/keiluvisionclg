@@ -1,0 +1,35 @@
+A51 MACRO ASSEMBLER  EXP_8                                                                04/26/2022 15:38:39 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp-8.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE exp-8.asm SET(SMALL) DEBUG PRINT(.\Listings\exp-8.lst) OBJECT(.\Objects
+                      \exp-8.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000H
+0000 C3                2     CLR C
+0001 7445              3     MOV A,#0445H
+*** ________________________________^
+*** WARNING #A52 IN 3 (exp-8.asm, LINE 3): VALUE HAS BEEN TRUNCATED TO 8 BITS
+0003 2493              4     ADD A,#093H
+0005 F9                5     MOV R1,A
+0006 7474              6     MOV A,#74H
+0008 34AB              7     ADDC A,#0ABH
+000A F8                8     MOV R0,A
+                       9     END
+A51 MACRO ASSEMBLER  EXP_8                                                                04/26/2022 15:38:39 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)
